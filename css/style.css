@@ -1,32 +1,53 @@
 @import url(variables.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Roboto Slab', sans-serif;
+    box-sizing: border-box;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-weight: bold;
+    /* border: solid 1px; */
 }
-.allpage{
-    width: 100%;
+.allpage, body{
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
 }
 header{
-    position: absolute;
-    width: 100%;
+    position: fixed;
+    width: 100vw;
     height: 5vh;
-    padding: 20px;
+    padding: 4em;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     z-index: 2;
 }
-nav ul, a {
+header img{
+    width: 5em;
+    height: 4.5em;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+.menu, nav, ul, a {
     list-style: none;
     text-decoration: none;
     color: var(--color-font);
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
+
+a:hover{
+    color: var(--color-primary);
+}
+
 .article{
     position: relative;
     z-index: 1;
@@ -35,17 +56,26 @@ nav ul, a {
     align-items: center;
     width: 100%;
     height: 100vh;
+    color: var(--color-font);
+}
+.orange{
+    color: var(--color-primary);
+    text-align: start;
+    font-size: 3em;
 }
 
 .article img{
     width: auto;
-    height: 40vh;
+    height: 30vh;
+    margin-right: 2em;
+    margin-left: 4em;
 }
+
 .fondo1{
     position: absolute;
     background-image: url(/storage/img/placeYourImageHere0.png);
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-size: cover;
 }
 .fondo1::after{
@@ -56,5 +86,29 @@ nav ul, a {
     width: 100%;
     height: 100%;
     background-color: #323239; /* Color del polarizado */
-    opacity: 0.8; /* Ajusta la opacidad según tus preferencias */
+    opacity: .93; /* Ajusta la opacidad según tus preferencias */
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 2em;
+    margin-right: 4em;
+}
+
+button{
+    color: var(--color-secundary);
+    font-size: 1em;
+    margin-top: .5em;
+    background-color: var(--color-primary);
+    width: 8em;
+    height: 3em;
+    border-radius: 5%;
+    border: 1px solid var(--color-ternario);
+}
+.section2{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-ternario);
 }
